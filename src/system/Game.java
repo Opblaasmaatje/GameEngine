@@ -1,17 +1,24 @@
 package system;
 
+import entities.Player;
+
 import java.awt.*;
 import java.awt.image.BufferStrategy;
+import java.util.Random;
 
 public class Game extends Canvas implements Runnable {
     public boolean running = false;
     public Window window;
-    public int height = 400;
-    public int width = 600;
+    public int height = 600;
+    public int width = 800;
     public static int current_fps;
+    private Handler handler;
+    private Random r;
 
     public Game(){
         window = new Window(this, width, height, "xddd");
+        handler = new Handler();
+        handler.addObject(new Player(100,100,ID.player));
         start();
     }
 
@@ -54,8 +61,7 @@ public class Game extends Canvas implements Runnable {
         g.setColor(Color.BLACK);
         g.fillRect(0,0, width, height);
 
-        g.setColor(Color.RED);
-        g.fillRect(50,50, 20, 20);
+        handler.render(g);
 
         g.dispose();
         bs.show();
@@ -63,8 +69,8 @@ public class Game extends Canvas implements Runnable {
 
     public void tick(){
         System.out.println(current_fps);
+        handler.tick();
     }
-
 
     public static void main(String[] args){
         new Game();
