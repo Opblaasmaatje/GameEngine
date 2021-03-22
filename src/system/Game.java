@@ -1,5 +1,6 @@
 package system;
 
+import entities.BasicEnemy;
 import entities.Player;
 
 import java.awt.*;
@@ -9,8 +10,8 @@ import java.util.Random;
 public class Game extends Canvas implements Runnable {
     public boolean running = false;
     public Window window;
-    public int height = 600;
-    public int width = 800;
+    public static int width = 800;
+    public static int height = width / 12 * 9;
     public static int current_fps;
     private Handler handler;
     private Random r;
@@ -19,7 +20,8 @@ public class Game extends Canvas implements Runnable {
         handler = new Handler();
         this.addKeyListener(new KeyInput(handler));
         window = new Window(this, width, height, "xddd");
-        handler.addObject(new Player(100,100,ID.player));
+        handler.addObject(new Player(400,300,ID.player));
+        handler.addObject(new BasicEnemy(0,0, ID.BasicEnemy));
         start();
     }
 
@@ -66,6 +68,12 @@ public class Game extends Canvas implements Runnable {
 
         g.dispose();
         bs.show();
+    }
+
+    public static int clamp(int var, int min, int max){
+        if(var >=max) return var = max;
+        if(var >= min) return var = min;
+        else return var;
     }
 
     public void tick(){
