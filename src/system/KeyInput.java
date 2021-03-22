@@ -11,11 +11,6 @@ public class KeyInput extends KeyAdapter {
         this.handler = handler;
     }
 
-
-
-
-
-
     public void keyPressed(KeyEvent e) {
         int key = e.getKeyCode();
 
@@ -24,10 +19,12 @@ public class KeyInput extends KeyAdapter {
 
             if(tempObject.getId() == ID.player){
                 // player movement here
-                if(key == KeyEvent.VK_W) tempObject.setVelY(-5);
-                if(key == KeyEvent.VK_S) tempObject.setVelY(5);
-                if(key == KeyEvent.VK_A) tempObject.setVelX(-5);
-                if(key == KeyEvent.VK_D) tempObject.setVelX(5);
+                switch (key) {
+                    case KeyEvent.VK_W -> tempObject.setVelY(-5);
+                    case KeyEvent.VK_S -> tempObject.setVelY(5);
+                    case KeyEvent.VK_A -> tempObject.setVelX(-5);
+                    case KeyEvent.VK_D -> tempObject.setVelX(5);
+                }
             }
         }
     }
@@ -38,10 +35,10 @@ public class KeyInput extends KeyAdapter {
             GameObject tempObject = handler.object.get(i);
             if(tempObject.getId() == ID.player){
                 // player movement here
-                if(key == KeyEvent.VK_W) tempObject.setVelY(0);
-                if(key == KeyEvent.VK_S) tempObject.setVelY(0);
-                if(key == KeyEvent.VK_A) tempObject.setVelX(0);
-                if(key == KeyEvent.VK_D) tempObject.setVelX(0);
+                switch (key) {
+                    case KeyEvent.VK_W, KeyEvent.VK_S -> tempObject.setVelY(0);
+                    case KeyEvent.VK_A, KeyEvent.VK_D -> tempObject.setVelX(0);
+                }
             }
         }
     }
