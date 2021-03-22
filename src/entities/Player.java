@@ -18,8 +18,8 @@ public class Player extends GameObject {
         x += velX;
         y += velY;
 
-//        y = Game.clamp(y, 0, Game.HEIGHT);
-//        x = Game.clamp(x, 0, Game.WIDTH);
+        y = Game.clamp(y, 0, Game.height);
+        x = Game.clamp(x, 0, Game.width);
     }
 
     @Override

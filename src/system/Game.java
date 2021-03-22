@@ -71,9 +71,9 @@ public class Game extends Canvas implements Runnable {
     }
 
     public static int clamp(int var, int min, int max){
-        if(var >=max) return var = max;
-        if(var >= min) return var = min;
-        else return var;
+        if(var >= max) return max;
+        else if(var <= min) return min;
+        return var;
     }
 
     public void tick(){
