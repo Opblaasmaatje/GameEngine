@@ -2,9 +2,11 @@ package system;
 
 import entities.BasicEnemy;
 import entities.Player;
+import system.textures.Textures;
 
 import java.awt.*;
 import java.awt.image.BufferStrategy;
+import java.awt.image.BufferedImage;
 import java.util.Random;
 
 public class Game extends Canvas implements Runnable {
@@ -15,9 +17,11 @@ public class Game extends Canvas implements Runnable {
     public static int current_fps;
     private Handler handler;
     private Random r;
+    private BufferedImage spriteSheet = null;
 
     public Game(){
         handler = new Handler();
+        new Textures();
         this.addKeyListener(new KeyInput(handler));
         window = new Window(this, width, height, "xddd");
         handler.addObject(new Player(400,300,ID.player));
