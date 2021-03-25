@@ -3,6 +3,7 @@ package entities;
 import system.Game;
 import system.GameObject;
 import system.ID;
+import system.textures.SpriteSheet;
 import system.textures.Textures;
 
 import java.awt.*;
@@ -26,6 +27,5 @@ public class Player extends GameObject {
     @Override
     public void render(Graphics g) {
         g.drawImage(Textures.player_sheet.getSubimage(0,0,32,32), x ,y , 80, 80, null);
-
     }
 }

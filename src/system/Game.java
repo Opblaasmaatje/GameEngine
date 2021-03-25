@@ -2,11 +2,13 @@ package system;
 
 import entities.BasicEnemy;
 import entities.Player;
+import system.textures.BufferedImageLoader;
 import system.textures.Textures;
 
 import java.awt.*;
 import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
+import java.sql.Timestamp;
 import java.util.Random;
 
 public class Game extends Canvas implements Runnable {
@@ -15,9 +17,10 @@ public class Game extends Canvas implements Runnable {
     public static int width = 800;
     public static int height = width / 12 * 9;
     public static int current_fps;
+    private BufferedImage spriteSheet = null;
     private Handler handler;
     private Random r;
-    private BufferedImage spriteSheet = null;
+
 
     public Game(){
         handler = new Handler();
@@ -51,7 +54,7 @@ public class Game extends Canvas implements Runnable {
 
             if (System.currentTimeMillis() - timer > 1000) {
                 timer += 1000;
-//                current_fps = frames;
+                current_fps = frames;
                 frames = 0;
             }
         }
@@ -70,6 +73,11 @@ public class Game extends Canvas implements Runnable {
 
         handler.render(g);
 
+        g.setFont(new Font("Arial", Font.PLAIN, 16));
+        g.setColor(Color.WHITE);
+        g.drawString(String.valueOf("FPS:" + current_fps), 0,16);
+
+
         g.dispose();
         bs.show();
     }
@@ -81,7 +89,6 @@ public class Game extends Canvas implements Runnable {
     }
 
     public void tick(){
-        System.out.println(current_fps);
         handler.tick();
     }
 
