@@ -1,9 +1,6 @@
 package game.entities;
 
-import game.system.Game;
-import game.system.GameObject;
-import game.system.ID;
-import game.system.KeyInput;
+import game.system.*;
 import game.system.textures.Textures;
 
 import java.awt.*;
@@ -21,8 +18,8 @@ public class Player extends GameObject {
         x += velX;
         y += velY;
 
-        y = Game.clamp(y, 0, Game.height);
-        x = Game.clamp(x, 0, Game.width);
+        y = Helper.clamp(y, 0, Game.width - 85);
+        x = Helper.clamp(x, 0, Game.width - 85);
         movePLayer();
 
 
@@ -51,6 +48,7 @@ public class Player extends GameObject {
 
     @Override
     public void render(Graphics g) {
+
         g.drawImage(Textures.player_sheet.getSubimage(0,0,32,32), x ,y , 80, 80, null);
     }
 }
