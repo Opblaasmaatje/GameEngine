@@ -1,4 +1,4 @@
-package system.textures;
+package game.system.textures;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;

@@ -1,6 +1,4 @@
-package system;
-
-import system.ID;
+package game.system;
 
 import java.awt.*;
 

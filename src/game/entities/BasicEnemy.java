@@ -1,8 +1,8 @@
-package entities;
+package game.entities;
 
-import system.Game;
-import system.GameObject;
-import system.ID;
+import game.system.Game;
+import game.system.GameObject;
+import game.system.ID;
 
 import java.awt.*;
 

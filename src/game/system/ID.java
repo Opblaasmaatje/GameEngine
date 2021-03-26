@@ -1,4 +1,4 @@
-package system;
+package game.system;
 
 public enum ID {
     player(),

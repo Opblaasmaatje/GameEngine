@@ -1,14 +1,11 @@
-package system;
+package game.system;
+import game.system.textures.*;
+import game.entities.*;
 
-import entities.BasicEnemy;
-import entities.Player;
-import system.textures.BufferedImageLoader;
-import system.textures.Textures;
 
 import java.awt.*;
 import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
-import java.sql.Timestamp;
 import java.util.Random;
 
 public class Game extends Canvas implements Runnable {

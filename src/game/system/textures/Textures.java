@@ -1,6 +1,5 @@
-package system.textures;
+package game.system.textures;
 
-import java.awt.*;
 import java.awt.image.BufferedImage;
 
 public class Textures {

@@ -1,8 +1,6 @@
-package system.textures;
+package game.system.textures;
 
-import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.util.HashMap;
 
 public class SpriteSheet {
     private BufferedImage image;

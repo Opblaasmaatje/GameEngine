@@ -1,10 +1,9 @@
-package entities;
+package game.entities;
 
-import system.Game;
-import system.GameObject;
-import system.ID;
-import system.textures.SpriteSheet;
-import system.textures.Textures;
+import game.system.Game;
+import game.system.GameObject;
+import game.system.ID;
+import game.system.textures.Textures;
 
 import java.awt.*;
 
