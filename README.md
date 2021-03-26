@@ -1,22 +1,11 @@
 # GameEngine
-# Top Down Java Game
 
-This is a game i'm making in my free time.<br>
-Its made purely with Java.
-<br>
-
-Game Version: `ALPHA V 3.94 COMBAT & AI`<br>
-<img src="./game_preview.png" alt="Game Preview Image">
 
 ## Game Details
-- Top down shooter
-- Roguelike
-- Dungeon crawler
-- Bullet hell
+- ...
 
 ## Current Version
-- `ALPHA`
-- [Exact Version](./src/game/system/main/Game.java#L33)
+- `PRE ALPHA`
 
 ## Big expected updates
 This can change.
@@ -25,23 +14,14 @@ This can change.
 
 ## Contributers
 ### Game Developer, Programmer and Game Director
-- [NielzosFilms](https://github.com/NielzosFilms)
-- [NielzosFilmsSchool](https://github.com/NielzosFilmsSchool)
-### Game Artists
-- [NielzosFilms](https://github.com/NielzosFilms)
-- [NielzosFilmsSchool](https://github.com/NielzosFilmsSchool)
-- [TimoTie02](https://github.com/TimoTie02)
-- [Sploem](https://github.com/Sploem)
-### Moral Support
 - [Joris ter Wolbeek](https://github.com/JoristerWolbeek/)
+### Game Artists
+- [Joris ter Wolbeek](https://github.com/JoristerWolbeek/)
+### Moral Support
+- [NielzosFilms](https://github.com/NielzosFilms)
+
 
 ## Game Default Key Bindings
 | Key | Action |
 | --- | ------ |
 | `W A S D` | Movement |
-| `SHIFT` | Dash |
-| `Left Click` | Shoot |
-| `B` | Open inventory |
-| `ESC` | Pause game |
-| `F4` | Debug mode |
-| `F11` | Switch fullscreen / windowed |
